@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patio Covers & Decks | Paradise Construction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a5276;
+            --secondary: #e67e22;
+            --accent: #27ae60;
+            --light: #f9f9f9;
+            --dark: #333;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .phone {
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 18px;
+            transition: var(--transition);
+        }
+
+        .phone:hover {
+            color: var(--secondary);
+        }
+
+        .quote-btn {
+            background-color: var(--secondary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .quote-btn:hover {
+            background-color: #d35400;
+            transform: translateY(-3px);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.267), rgba(0, 0, 0, 0.7)), url('https://builditpdx.com/wp-content/uploads/2023/05/paradise-construction-portland-deck-builders.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #d35400;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .features {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #666;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 50px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+
+        .gallery {
+            padding: 80px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 250px;
+            box-shadow: var(--shadow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+
+        .testimonials-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .testimonial {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            display: none;
+        }
+
+        .testimonial.active {
+            display: block;
+            animation: fadeIn 1s ease;
+        }
+
+        .testimonial-text {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .testimonial-rating {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .testimonial-dot.active {
+            background-color: var(--secondary);
+        }
+
+
+        .calculator {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary), #2c3e50);
+            color: white;
+        }
+
+        .calculator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .calculator-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            color: var(--dark);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        .range-slider {
+            width: 100%;
+            margin: 15px 0;
+        }
+
+        .range-value {
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .calculator-result {
+            background-color: var(--accent);
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        .calculator-result h3 {
+            margin-bottom: 10px;
+        }
+
+        .estimate-value {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+
+        .cta {
+            padding: 80px 0;
+            text-align: center;
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+        }
+
+
+        .chat-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .chat-btn {
+            background-color: var(--secondary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .chat-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .chat-box {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            display: none;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .chat-box.active {
+            display: block;
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .chat-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header h3 {
+            margin: 0;
+        }
+
+        .close-chat {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .chat-body {
+            padding: 15px;
+            height: 300px;
+            overflow-y: auto;
+        }
+
+        .chat-message {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            max-width: 80%;
+        }
+
+        .bot-message {
+            background-color: #f1f1f1;
+            align-self: flex-start;
+        }
+
+        .user-message {
+            background-color: var(--primary);
+            color: white;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #eee;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .send-btn {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .footer-col p,
+        .footer-col a {
+            margin-bottom: 10px;
+            display: block;
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--secondary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #444;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .chat-box {
+                width: 300px;
+            }
+        }
+
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+            overflow: hidden;
+        }
+
+        #hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.253), rgba(0, 0, 0, 0.295));
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">PARADISE <span>CONSTRUCTION</span></a>
+            <div>
+                <a href="tel:503-284-5348" class="phone">503-284-5348</a>
+                <a href="#quote-form" class="quote-btn">GET A QUOTE</a>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <video autoplay muted loop id="hero-video">
+            <source src="hero.mp4" type="video/mp4">
+
+            <img src="https://builditpdx.com/wp-content/uploads/2023/05/paradise-construction-portland-deck-builders.jpg"
+                alt="Fallback Hero Image">
+        </video>
+        <div class="hero-content">
+            <h1>Custom Patio Covers & Decks for Your Portland Home</h1>
+            <p>Transform your outdoor space with our premium construction services. Enjoy your backyard in any weather
+                with a custom-built solution.</p>
+            <div class="hero-btns">
+                <a href="#quote-form" class="btn btn-primary pulse">GET FREE ESTIMATE</a>
+                <a href="#gallery" class="btn btn-secondary">VIEW OUR WORK</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="features">
+        <div class="section-title">
+            <h2>Why Choose Our Patio & Deck Services</h2>
+            <p>We combine quality craftsmanship with exceptional customer service to deliver outdoor spaces you'll love
+                for years to come.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card fade-in delay-1">
+                <div class="feature-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3>Premium Materials</h3>
+                <p>We use only the highest quality materials that withstand Portland's weather conditions for
+                    long-lasting durability.</p>
+            </div>
+            <div class="feature-card fade-in delay-2">
+                <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Timely Completion</h3>
+                <p>We respect your time and complete projects on schedule without compromising quality.</p>
+            </div>
+            <div class="feature-card fade-in delay-3">
+                <div class="feature-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <h3>Fixed Pricing</h3>
+                <p>No hidden costs or surprises. We provide accurate estimates and stick to them.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="section-title">
+            <h2>Our Patio Cover & Deck Projects</h2>
+            <p>Browse our recent work to see the quality and craftsmanship we bring to every project.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://builditpdx.com/wp-content/themes/pconst/timthumb.php?src=https://builditpdx.com/wp-content/uploads/2018/02/DSC01435-Edit-2-e1592711300291.jpg&w=250&h=180&zc=0"
+                    alt="Custom Deck">
+                <div class="gallery-overlay">
+                    <h3>Modern Wood Deck</h3>
+                    <p>Hillsboro, OR</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://builditpdx.com/wp-content/themes/pconst/timthumb.php?src=https://builditpdx.com/wp-content/uploads/2018/02/DSC01264-Edit-1.jpg&w=250&h=180&zc=0"
+                    alt="Patio Cover">
+                <div class="gallery-overlay">
+                    <h3>Aluminum Patio Cover</h3>
+                    <p>Portland, OR</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://builditpdx.com/wp-content/themes/pconst/timthumb.php?src=https://builditpdx.com/wp-content/uploads/2018/02/dsc_0179_edit-e1589775261803.jpg&w=250&h=180&zc=0"
+                    alt="Outdoor Living Space">
+                <div class="gallery-overlay">
+                    <h3>Complete Outdoor Living Space</h3>
+                    <p>Beaverton, OR</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="section-title">
+            <h2>What Our Clients Say</h2>
+            <p>Don't just take our word for it - hear from homeowners who've transformed their outdoor spaces with us.
+            </p>
+        </div>
+        <div class="testimonials-slider">
+            <div class="testimonial active">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Paradise Construction built us an amazing patio cover that's completely
+                    transformed how we use our backyard. Even in rainy Portland winters, we can enjoy our outdoor space.
+                    The team was professional, on time, and the quality is outstanding."</p>
+                <p class="testimonial-author">- Sarah J., Hillsboro</p>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Our new deck is the envy of the neighborhood! The attention to detail is
+                    incredible, and they finished ahead of schedule. We've recommended Paradise to all our friends
+                    looking for outdoor construction work."</p>
+                <p class="testimonial-author">- Michael T., Portland</p>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"From design to completion, the experience was seamless. They listened to
+                    what we wanted and delivered beyond our expectations. The patio cover is beautiful and functional -
+                    we use it year-round!"</p>
+                <p class="testimonial-author">- Lisa & Robert W., Beaverton</p>
+            </div>
+            <div class="testimonial-nav">
+                <div class="testimonial-dot active" data-slide="0"></div>
+                <div class="testimonial-dot" data-slide="1"></div>
+                <div class="testimonial-dot" data-slide="2"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="calculator">
+        <div class="calculator-container">
+            <div class="section-title">
+                <h2>Get a Quick Estimate</h2>
+                <p>Use our calculator to get an approximate cost for your project.</p>
+            </div>
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="project-type">Project Type</label>
+                    <select id="project-type" class="form-control">
+                        <option value="patio-cover">Patio Cover</option>
+                        <option value="deck">Deck</option>
+                        <option value="combo">Patio Cover + Deck</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="size">Size (sq ft) <span class="range-value" id="size-value">200</span></label>
+                    <input type="range" id="size" class="range-slider" min="100" max="1000" value="200" step="50">
+                </div>
+                <div class="form-group">
+                    <label for="material">Material</label>
+                    <select id="material" class="form-control">
+                        <option value="basic">Basic (Pressure-Treated Wood)</option>
+                        <option value="premium">Premium (Composite or Cedar)</option>
+                        <option value="luxury">Luxury (Exotic Hardwoods)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="features">Additional Features</label>
+                    <select id="features" class="form-control">
+                        <option value="none">None</option>
+                        <option value="lighting">Lighting</option>
+                        <option value="railing">Custom Railing</option>
+                        <option value="both">Lighting + Railing</option>
+                    </select>
+                </div>
+                <button id="calculate-btn" class="btn btn-primary" style="width: 100%;">CALCULATE ESTIMATE</button>
+                <div class="calculator-result" id="calculator-result">
+                    <h3>Your Estimated Cost</h3>
+                    <div class="estimate-value" id="estimate-value">$8,000 - $12,000</div>
+                    <p>For a more accurate quote, contact us for a free consultation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-presentation" style="padding: 80px 0; background-color: var(--light);">
+        <div class="section-title">
+            <h2>See Our Work in Action</h2>
+            <p>Watch how we transform ordinary backyards into extraordinary outdoor living spaces.</p>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to Transform Your Outdoor Space?</h2>
+        <p>Contact us today for a free consultation and let's start planning your dream patio cover or deck.</p>
+        <a href="#quote-form" class="btn btn-primary pulse">GET STARTED NOW</a>
+    </section>
+
+    <section id="quote-form" style="padding: 80px 0; background-color: white;">
+        <div class="section-title">
+            <h2>Request a Free Quote</h2>
+            <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+        </div>
+        <div style="max-width: 600px; margin: 0 auto; padding: 0 20px;">
+            <form id="contact-form"
+                style="background-color: var(--light); padding: 30px; border-radius: 10px; box-shadow: var(--shadow);">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="project-details">Tell Us About Your Project</label>
+                    <textarea id="project-details" class="form-control" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SUBMIT REQUEST</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <div class="chat-header">
+                <h3>How can we help?</h3>
+                <button class="close-chat" id="close-chat">&times;</button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="chat-message bot-message">
+                    Hi there! I'm here to help with any questions about patio covers or decks. What would you like to
+                    know?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your question...">
+                <button class="send-btn" id="send-btn">Send</button>
+            </div>
+        </div>
+        <div class="chat-btn" id="chat-btn">
+            <i class="fas fa-comment-dots"></i>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Paradise Construction</h3>
+                <p>A residential design & build company serving Hillsboro and the Portland metropolitan area.</p>
+                <p>Driven by the desire to create a legacy through quality craftsmanship.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Services</h3>
+                <a href="#">Patio Covers</a>
+                <a href="#">Decks</a>
+                <a href="#">Custom Homes</a>
+                <a href="#">Additions</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <a href="#">Hillsboro, OR 97123</a>
+                <a href="tel:503-284-5348">503-284-5348</a>
+                <a href="tel:503-284-5348">503-BUILDIT</a>
+                <a href="mailto:paradise@buidipdx.com">paradise@buidipdx.com</a>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#"><i class="fab fa-yelp"></i></a>
+                </div>
+                <p style="margin-top: 20px;">LICENSED • BONDED • INSURED</p>
+                <p>CCB#205011</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+
+        </div>
+    </footer>
+
+    <script>
+
+        const testimonials = document.querySelectorAll('.testimonial');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            currentSlide = (n + testimonials.length) % testimonials.length;
+            testimonials[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+
+
+        setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+
+        const calculateBtn = document.getElementById('calculate-btn');
+        const calculatorResult = document.getElementById('calculator-result');
+        const estimateValue = document.getElementById('estimate-value');
+        const sizeSlider = document.getElementById('size');
+        const sizeValue = document.getElementById('size-value');
+
+        sizeSlider.addEventListener('input', () => {
+            sizeValue.textContent = sizeSlider.value;
+        });
+
+        calculateBtn.addEventListener('click', () => {
+
+            const projectType = document.getElementById('project-type').value;
+            const size = parseInt(document.getElementById('size').value);
+            const material = document.getElementById('material').value;
+            const features = document.getElementById('features').value;
+
+
+            let basePricePerSqFt;
+
+            if (projectType === 'patio-cover') {
+                basePricePerSqFt = material === 'basic' ? 35 : material === 'premium' ? 50 : 75;
+            } else if (projectType === 'deck') {
+                basePricePerSqFt = material === 'basic' ? 25 : material === 'premium' ? 40 : 65;
+            } else {
+                basePricePerSqFt = material === 'basic' ? 60 : material === 'premium' ? 90 : 140;
+            }
+
+
+            let featuresMultiplier = 1;
+            if (features === 'lighting' || features === 'railing') {
+                featuresMultiplier = 1.15;
+            } else if (features === 'both') {
+                featuresMultiplier = 1.3;
+            }
+
+
+            const basePrice = basePricePerSqFt * size;
+            const totalPrice = basePrice * featuresMultiplier;
+            const lowerRange = Math.round(totalPrice * 0.8);
+            const upperRange = Math.round(totalPrice * 1.2);
+
+
+            estimateValue.textContent = `$${lowerRange.toLocaleString()} - $${upperRange.toLocaleString()}`;
+            calculatorResult.style.display = 'block';
+        });
+
+        const chatBtn = document.getElementById('chat-btn');
+        const chatBox = document.getElementById('chat-box');
+        const closeChat = document.getElementById('close-chat');
+        const chatBody = document.getElementById('chat-body');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+
+        chatBtn.addEventListener('click', () => {
+            chatBox.classList.toggle('active');
+        });
+
+        closeChat.addEventListener('click', () => {
+            chatBox.classList.remove('active');
+        });
+
+        function addBotMessage(message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('chat-message', 'bot-message');
+            messageDiv.textContent = message;
+            chatBody.appendChild(messageDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function addUserMessage(message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('chat-message', 'user-message');
+            messageDiv.textContent = message;
+            chatBody.appendChild(messageDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        sendBtn.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        function sendMessage() {
+            const message = userInput.value.trim();
+            if (message) {
+                addUserMessage(message);
+                userInput.value = '';
+
+
+                setTimeout(() => {
+                    if (message.toLowerCase().includes('price') || message.toLowerCase().includes('cost')) {
+                        addBotMessage("Our patio covers typically range from $5,000-$15,000 and decks from $8,000-$25,000 depending on size and materials. For a more accurate estimate, try our calculator or request a free quote!");
+                    } else if (message.toLowerCase().includes('time') || message.toLowerCase().includes('long')) {
+                        addBotMessage("Most patio cover projects take 2-4 weeks, while decks typically take 3-6 weeks from start to finish. The exact timeline depends on the project scope and weather conditions.");
+                    } else if (message.toLowerCase().includes('material') || message.toLowerCase().includes('wood')) {
+                        addBotMessage("We offer various materials including pressure-treated wood, cedar, composite, and aluminum. Each has different benefits in terms of durability, maintenance, and cost. Which are you most interested in?");
+                    } else if (message.toLowerCase().includes('start') || message.toLowerCase().includes('begin')) {
+                        addBotMessage("Great! To get started, we'll schedule a free consultation to discuss your project. Would you like me to connect you with our team now?");
+                    } else {
+                        addBotMessage("I'd be happy to help with that! For more detailed information, you can visit our website or I can connect you with one of our specialists. What else would you like to know?");
+                    }
+                }, 1000);
+            }
+        }
+
+
+        const contactForm = document.getElementById('contact-form');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const projectDetails = document.getElementById('project-details').value;
+
+
+            alert(`Thank you, ${name}! Your quote request has been submitted. We'll contact you within 24 hours.`);
+
+            contactForm.reset();
+        });
+
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+
+        animateOnScroll();
+    </script>
+</body>
+
+</html>
